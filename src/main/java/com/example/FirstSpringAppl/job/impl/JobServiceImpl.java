@@ -1,5 +1,8 @@
-package com.example.FirstSpringAppl.job;
+package com.example.FirstSpringAppl.job.impl;
 
+import com.example.FirstSpringAppl.job.Job;
+import com.example.FirstSpringAppl.job.JobRepository;
+import com.example.FirstSpringAppl.job.JobService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,7 +12,8 @@ import java.util.Optional;
 @Service
 public class JobServiceImpl implements JobService {
 
-    @Autowired JobRepository jobRepository;
+    @Autowired
+    JobRepository jobRepository;
     @Override
     public List<Job> findAll() {
         return jobRepository.findAll();
